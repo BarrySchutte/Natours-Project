@@ -92,6 +92,7 @@ body {
 
 
 .btn {
+
     &:link,
     &:visited {
         display: inline-block;
@@ -103,21 +104,22 @@ body {
         transition: .2s;
         position: relative;
     }
+
     &:hover {
         transform: translateY(-3px);
         box-shadow: .2rem 1rem 2rem rgba($color-black, .2);
-        
+
         &::after {
             transform: scaleX(1.4) scaleY(1.6);
             opacity: 0;
         }
     }
-    
+
     &:active {
         transform: translateY(-1px);
         box-shadow: .1rem .5rem 1rem rgba($color-black, .2);
     }
-    
+
     &::after {
         content: "";
         display: inline-block;
@@ -130,16 +132,16 @@ body {
         z-index: -1;
         transition: .6s;
     }
-    
+
     &--white {
         background-color: $color-white;
         color: $color-grey-dark;
-        
+
         &::after {
             background-color: $color-white;
         }
     }
-    
+
     &--animated {
         animation: moveInBottom 1s ease-out .75s backwards;
     }
