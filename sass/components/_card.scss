@@ -15,7 +15,7 @@
         top: 0;
         left: 0;
         width: 100%;
-        border-radius: 3px;
+        border-radius: $default-radius;
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
         overflow: hidden;
@@ -65,8 +65,8 @@
         background-blend-mode: screen;
         -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
         clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
-        border-top-left-radius: 3px;
-        border-top-right-radius: 3px;
+        border-top-left-radius: $default-radius;
+        border-top-right-radius: $default-radius;
 
         &--1 {
             background-image: -webkit-gradient(linear, left top, right bottom, from($color-secondary-light), to($color-secondary-dark)), url(../img/nat-5.jpg);
