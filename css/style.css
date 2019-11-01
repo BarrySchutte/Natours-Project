@@ -557,7 +557,7 @@ body {
     content: "";
     position: absolute;
     left: 0;
-    transition: .6s; }
+    transition: top .2s, transform .6s; }
   .navigation__icon::before {
     top: -.9rem; }
   .navigation__icon::after {
