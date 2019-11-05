@@ -31,6 +31,8 @@ $Breakpoint argument choices:
 - tab-land
 - big-desktop
 
+ORDER: Base + Typography > General Layout + Grid > Page Layout > Components
+
 1em = 16px
 */
 
@@ -45,6 +47,6 @@ $Breakpoint argument choices:
         @media (max-width: 75em) {@content};     //1200px
     }
     @if $breakpoint==big-desktop {
-        @media (mind-width: 112.5em) {@content};    //1800+
+        @media (min-width: 112.5em) {@content};    //1800+
     }
 }
