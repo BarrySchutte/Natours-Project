@@ -159,24 +159,27 @@
         font-weight: 100;
     }
 
-    @include respond(tab-port) {
+    //@include respond(tab-port) 
+    @media only screen and (max-width: 56.25em),
+    only screen and (hover:none) {
+
         height: auto;
         border-radius: $default-radius;
         background-color: $color-white;
         -webkit-box-shadow: $shadow-1;
-                box-shadow: $shadow-1;
-    
+        box-shadow: $shadow-1;
+
         &__side {
             height: auto;
             position: relative;
             -webkit-box-shadow: none;
-                    box-shadow: none;
+            box-shadow: none;
 
             &--back {
                 -webkit-transform: rotateY(0);
                 transform: rotateY(0);
                 -webkit-clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
-                        clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+                clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
             }
         }
 
@@ -188,14 +191,14 @@
         &__details {
             padding: 1rem 3rem;
         }
-       
+
         // BACK SIDE STYLING
         &__cta {
             position: relative;
             top: 0;
             left: 0;
             -webkit-transform: translate(0);
-                    transform: translate(0);
+            transform: translate(0);
             width: 100%;
             padding: 7rem 4rem 4rem 4rem;
         }
