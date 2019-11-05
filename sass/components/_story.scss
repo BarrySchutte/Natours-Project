@@ -1,13 +1,15 @@
 .story {
     width: 75%;
     margin: 0 auto;
-    box-shadow: $shadow-1;
+    -webkit-box-shadow: $shadow-1;
+            box-shadow: $shadow-1;
     background-color: rgba($color-white, .7);
     border-radius: $default-radius;
     padding: 6rem;
     padding-left: 9rem;
     font-size: $default-font-size;
-    transform: skewX(-12deg);
+    -webkit-transform: skewX(-12deg);
+            transform: skewX(-12deg);
 
     @include respond(tab-port) {
         width: 100%;
@@ -16,37 +18,48 @@
     }
 
     @include respond(phone) {
-        transform: skewX(0);
+        -webkit-transform: skewX(0);
+                transform: skewX(0);
     }
 
     &__shape {
         width: 15rem;
         height: 15rem;
         float: left;
-        -webkit-shape-outside: circle(50% at 50% 50%);
-        shape-outside: circle(50% at 50% 50%);
-        -webkit-clip-path: circle(50% at 50% 50%);
-        clip-path: circle(50% at 50% 50%);
-        transform: translateX(-3rem) skewX(12deg);
+        -webkit-transform: translateX(-3rem) skewX(12deg);
+                transform: translateX(-3rem) skewX(12deg);
         position: relative;
         overflow: hidden;
+        border-radius: 50%;
+
+        @supports ((-webkit-clip-path: polygon(0 0)) or (clip-path: polygon(0 0))) or (-webkit-clip-path: polygon(0 0)) {
+            -webkit-clip-path: circle(50% at 50% 50%);
+            clip-path: circle(50% at 50% 50%);
+            shape-outside: circle(50% at 50% 50%);
+            border-radius: none;
+        }
 
         @include respond(phone) {
-            transform: translateX(-3rem) skewX(0);
+            -webkit-transform: translateX(-3rem) skewX(0);
+                    transform: translateX(-3rem) skewX(0);
         }
     }
 
     &__img {
         height: 100%;
-        transform: translateX(-4rem) scale(1.4);
+        -webkit-transform: translateX(-4rem) scale(1.4);
+                transform: translateX(-4rem) scale(1.4);
+        -webkit-transition: .5s;
         transition: .5s;
     }
 
     &__text {
-        transform: skewX(12deg);
+        -webkit-transform: skewX(12deg);
+                transform: skewX(12deg);
 
         @include respond(phone) {
-            transform: skewX(0);
+            -webkit-transform: skewX(0);
+                    transform: skewX(0);
         }
     }
 
@@ -54,23 +67,29 @@
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, 20%);
+        -webkit-transform: translate(-50%, 20%);
+                transform: translate(-50%, 20%);
         color: $color-white;
         text-transform: uppercase;
         font-size: 1.7rem;
         text-align: center;
         opacity: 0;
+        -webkit-transition: .5s;
         transition: .5s;
-        backface-visibility: none;
+        -webkit-backface-visibility: none;
+                backface-visibility: none;
     }
 
     &:hover &__caption {
         opacity: 1;
-        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
     }
 
     &:hover &__img {
-        transform: translateX(-4rem) scale(1);
-        filter: blur(3px) brightness(80%);
+        -webkit-transform: translateX(-4rem) scale(1);
+                transform: translateX(-4rem) scale(1);
+        -webkit-filter: blur(3px) brightness(80%);
+                filter: blur(3px) brightness(80%);
     }
 }

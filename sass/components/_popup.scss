@@ -8,18 +8,28 @@
     z-index: 3000;
     opacity: 0;
     visibility: hidden;
+    -webkit-transition: .3s;
     transition: .3s;
+
+    @supports ((-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px))) {
+        -webkit-backdrop-filter: blur(10px);
+                backdrop-filter: blur(10px);
+        background-color: rgba($color-black, .3);
+    }
 
     &__content {
         @include center;
         width: 75%;
         background-color: $color-white;
-        box-shadow: $shadow-2;
+        -webkit-box-shadow: $shadow-2;
+                box-shadow: $shadow-2;
         border-radius: $default-radius;
         display: table;
         overflow: hidden;
         opacity: 0;
-        transform: translate(-50%, -50%) scale(.2);
+        -webkit-transform: translate(-50%, -50%) scale(.2);
+                transform: translate(-50%, -50%) scale(.2);
+        -webkit-transition: .4s .2s;
         transition: .4s .2s;
 
         @include respond(tab-port) {
@@ -62,24 +72,27 @@
         @include respond(tab-port) {
             width: 49%;
             display: inline-block;
-            transform: scale(1.1);
+            -webkit-transform: scale(1.1);
+                    transform: scale(1.1);
         }
     }
 
     &__text {
         font-size: 1.4rem;
         margin-bottom: 4rem;
-        -moz-column-count: 2;
-        column-count: 2;
-        column-gap: 4rem;
-        column-rule: 1px solid $color-grey-light-2;
-        -moz-hyphens: auto;
+        -webkit-column-count: 2;
+                column-count: 2;
+        -webkit-column-gap: 4rem;
+                column-gap: 4rem;
+        -webkit-column-rule: 1px solid $color-grey-light-2;
+                column-rule: 1px solid $color-grey-light-2;
         -ms-hyphens: auto;
         -webkit-hyphens: auto;
         hyphens: auto;
 
         @include respond(tab-port) {
-            column-count: 1;
+            -webkit-column-count: 1;
+                    column-count: 1;
         }
     }
 
@@ -91,7 +104,8 @@
 
     &:target &__content {
         opacity: 1;
-        transform: translate(-50%, -50%) scale(1);
+        -webkit-transform: translate(-50%, -50%) scale(1);
+                transform: translate(-50%, -50%) scale(1);
     }
 
     &__close {
@@ -105,6 +119,7 @@
             font-size: 4rem;
             text-decoration: none;
             display: inline-block;
+            -webkit-transition: .2s;
             transition: .2s;
             line-height: 1;
         }
