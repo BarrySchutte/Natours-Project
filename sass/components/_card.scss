@@ -1,5 +1,4 @@
 .card {
-
     // FUNCTIONALITY
     height: 52rem;
     -webkit-perspective: 150rem;
@@ -9,8 +8,8 @@
 
     &__side {
         height: 52rem;
-        -webkit-transition: .8s ease;
-        transition: .8s ease;
+        -webkit-transition: 0.8s ease;
+        transition: 0.8s ease;
         position: absolute;
         top: 0;
         left: 0;
@@ -97,23 +96,23 @@
     }
 
     &__heading-span {
-        padding: 1rem .5rem;
+        padding: 1rem 0.5rem;
         -webkit-box-decoration-break: clone;
         box-decoration-break: clone;
 
         &--1 {
-            background-image: -webkit-gradient(linear, left top, right bottom, from(rgba($color-secondary-light, .85)), to(rgba($color-secondary-dark, .85)));
-            background-image: linear-gradient(to right bottom, rgba($color-secondary-light, .85), rgba($color-secondary-dark, .85));
+            background-image: -webkit-gradient(linear, left top, right bottom, from(rgba($color-secondary-light, 0.85)), to(rgba($color-secondary-dark, 0.85)));
+            background-image: linear-gradient(to right bottom, rgba($color-secondary-light, 0.85), rgba($color-secondary-dark, 0.85));
         }
 
         &--2 {
-            background-image: -webkit-gradient(linear, left top, right bottom, from(rgba($color-primary-light, .85)), to(rgba($color-primary-dark, .85)));
-            background-image: linear-gradient(to right bottom, rgba($color-primary-light, .85), rgba($color-primary-dark, .85));
+            background-image: -webkit-gradient(linear, left top, right bottom, from(rgba($color-primary-light, 0.85)), to(rgba($color-primary-dark, 0.85)));
+            background-image: linear-gradient(to right bottom, rgba($color-primary-light, 0.85), rgba($color-primary-dark, 0.85));
         }
 
         &--3 {
-            background-image: -webkit-gradient(linear, left top, right bottom, from(rgba($color-tertiary-light, .85)), to(rgba($color-tertiary-dark, .85)));
-            background-image: linear-gradient(to right bottom, rgba($color-tertiary-light, .85), rgba($color-tertiary-dark, .85));
+            background-image: -webkit-gradient(linear, left top, right bottom, from(rgba($color-tertiary-light, 0.85)), to(rgba($color-tertiary-dark, 0.85)));
+            background-image: linear-gradient(to right bottom, rgba($color-tertiary-light, 0.85), rgba($color-tertiary-dark, 0.85));
         }
     }
 
@@ -159,10 +158,8 @@
         font-weight: 100;
     }
 
-    //@include respond(tab-port) 
-    @media only screen and (max-width: 56.25em),
-    only screen and (hover:none) {
-
+    //@include respond(tab-port)
+    @media only screen and (max-width: 56.25em), only screen and (hover: none) {
         height: auto;
         border-radius: $default-radius;
         background-color: $color-white;
@@ -211,5 +208,4 @@
             font-size: 4rem;
         }
     }
-
 }

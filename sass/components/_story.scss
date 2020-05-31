@@ -2,14 +2,14 @@
     width: 75%;
     margin: 0 auto;
     -webkit-box-shadow: $shadow-1;
-            box-shadow: $shadow-1;
-    background-color: rgba($color-white, .7);
+    box-shadow: $shadow-1;
+    background-color: rgba($color-white, 0.7);
     border-radius: $default-radius;
     padding: 6rem;
     padding-left: 9rem;
     font-size: $default-font-size;
     -webkit-transform: skewX(-12deg);
-            transform: skewX(-12deg);
+    transform: skewX(-12deg);
 
     @include respond(tab-port) {
         width: 100%;
@@ -19,7 +19,7 @@
 
     @include respond(phone) {
         -webkit-transform: skewX(0);
-                transform: skewX(0);
+        transform: skewX(0);
     }
 
     &__shape {
@@ -27,7 +27,7 @@
         height: 15rem;
         float: left;
         -webkit-transform: translateX(-3rem) skewX(12deg);
-                transform: translateX(-3rem) skewX(12deg);
+        transform: translateX(-3rem) skewX(12deg);
         position: relative;
         overflow: hidden;
         border-radius: 50%;
@@ -41,25 +41,25 @@
 
         @include respond(phone) {
             -webkit-transform: translateX(-3rem) skewX(0);
-                    transform: translateX(-3rem) skewX(0);
+            transform: translateX(-3rem) skewX(0);
         }
     }
 
     &__img {
         height: 100%;
         -webkit-transform: translateX(-4rem) scale(1.4);
-                transform: translateX(-4rem) scale(1.4);
-        -webkit-transition: .5s;
-        transition: .5s;
+        transform: translateX(-4rem) scale(1.4);
+        -webkit-transition: 0.5s;
+        transition: 0.5s;
     }
 
     &__text {
         -webkit-transform: skewX(12deg);
-                transform: skewX(12deg);
+        transform: skewX(12deg);
 
         @include respond(phone) {
             -webkit-transform: skewX(0);
-                    transform: skewX(0);
+            transform: skewX(0);
         }
     }
 
@@ -68,28 +68,28 @@
         top: 50%;
         left: 50%;
         -webkit-transform: translate(-50%, 20%);
-                transform: translate(-50%, 20%);
+        transform: translate(-50%, 20%);
         color: $color-white;
         text-transform: uppercase;
         font-size: 1.7rem;
         text-align: center;
         opacity: 0;
-        -webkit-transition: .5s;
-        transition: .5s;
+        -webkit-transition: 0.5s;
+        transition: 0.5s;
         -webkit-backface-visibility: none;
-                backface-visibility: none;
+        backface-visibility: none;
     }
 
     &:hover &__caption {
         opacity: 1;
         -webkit-transform: translate(-50%, -50%);
-                transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
     }
 
     &:hover &__img {
         -webkit-transform: translateX(-4rem) scale(1);
-                transform: translateX(-4rem) scale(1);
+        transform: translateX(-4rem) scale(1);
         -webkit-filter: blur(3px) brightness(80%);
-                filter: blur(3px) brightness(80%);
+        filter: blur(3px) brightness(80%);
     }
 }

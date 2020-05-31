@@ -9,12 +9,12 @@
         color: inherit;
         padding: 1.5rem 2rem;
         border-radius: 2px;
-        background-color: rgba($color-white, .5);
+        background-color: rgba($color-white, 0.5);
         border: none;
         border-bottom: 3px solid transparent;
         width: 90%;
         display: block;
-        transition: .3s;
+        transition: 0.3s;
 
         @include respond(tab-port) {
             width: 100%;
@@ -23,7 +23,7 @@
 
         &:focus {
             outline: none;
-            box-shadow: 0 1rem 2rem rgba($color-black, .1);
+            box-shadow: 0 1rem 2rem rgba($color-black, 0.1);
             border-bottom: 3px solid $color-primary;
         }
 
@@ -40,12 +40,12 @@
         font-size: 1.2rem;
         font-weight: 700;
         margin-left: 2rem;
-        margin-top: .7rem;
+        margin-top: 0.7rem;
         display: block;
-        transition: .3s;
+        transition: 0.3s;
     }
 
-    &__input:placeholder-shown+&__label {
+    &__input:placeholder-shown + &__label {
         opacity: 0;
         visibility: hidden;
         transform: translateY(-4rem);
@@ -80,10 +80,10 @@
         display: inline-block;
         position: absolute;
         left: 0;
-        top: -.4rem;
+        top: -0.4rem;
 
         &::after {
-            content: "";
+            content: '';
             display: block;
             height: 1.3rem;
             width: 1.3rem;
@@ -94,11 +94,11 @@
             transform: translate(-50%, -50%);
             background-color: $color-primary;
             opacity: 0;
-            transition: .2s;
+            transition: 0.2s;
         }
     }
 
-    &__radio-input:checked~&__radio-label &__radio-button::after {
+    &__radio-input:checked ~ &__radio-label &__radio-button::after {
         opacity: 1;
     }
 }
