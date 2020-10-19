@@ -1,3 +1,5 @@
+@use "../abstracts/index" as *;
+
 .footer {
     background-color: $color-grey-dark-3;
     padding: 10rem 0;
